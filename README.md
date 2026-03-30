@@ -21,7 +21,7 @@ Tijdens het project zijn interviews uitgevoerd om te onderzoeken welke vormen va
 
 Naast het hoofdproduct is ook **LUMO Connect** ontwikkeld. Dit ondersteunt de werking van het systeem en zorgt voor extra connectiviteit binnen het project.
 
-Code: [LUMO Connect repo (Github)](https://github.com/toon-van-berkel/Conncet.Lumo)
+Code: [LUMO Connect repo (Github)](https://github.com/toon-van-berkel/Connect.Lumo)
 
 ## Doel van het project
 
