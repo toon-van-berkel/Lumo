@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Support – Lumo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/support.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("SH3wRrD5fC4vkhWeO");
+        })();
+    </script>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Guide</a></li>
+    </ul>
+
+    <a href="./index.html">
+        <img src="./assets/LUMO-logo.png" alt="Logo of LUMO">
+    </a>
+
+    <ul>
+        <li><a href="./support.html">Support</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="container">
+        <div id="form-content">
+            <h1>Report a Problem</h1>
+            <p>Experiencing an issue with <strong>Lumo</strong>? Let us know below.</p>
+
+            <form id="support-form" novalidate>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your name" required minlength="2">
+                <span class="error-msg" id="name-error"></span>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="your@email.com" required>
+                <span class="error-msg" id="email-error"></span>
+
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" placeholder="What is this about?" required>
+                <span class="error-msg" id="subject-error"></span>
+
+                <label for="message">Describe the issue</label>
+                <textarea name="message" id="message" placeholder="Please describe your problem..." required minlength="10"></textarea>
+                <span class="error-msg" id="message-error"></span>
+
+                <button type="submit" id="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div id="thanks-message" style="display: none; text-align: center; padding: 20px;">
+            <h1 style="color: #00bf00;">Sent!</h1>
+            <p>Thank you for reaching out. We've sent a confirmation to your email.</p>
+            <button onclick="location.reload()" style="background: transparent; border: 1px solid #4b5563; color: #9ca3af; margin-top: 20px; width: auto; padding: 10px 20px; border-radius: 999px;">
+                Send another message
+            </button>
+        </div>
+
+        <div class="footer">
+            © 2026 Lumo Support
+        </div>
+    </div>
+</main>
+
+<script src="./javascript/support.js"></script>
+
+</body>
+</html>
