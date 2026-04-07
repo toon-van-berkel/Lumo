@@ -1,3 +1,6 @@
+// Initialisatie staat hier,
+emailjs.init("SH3wRrD5fC4vkhWeO");
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("support-form");
     const formContent = document.getElementById("form-content");
@@ -11,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let isValid = true;
         const inputs = form.querySelectorAll("input[required], textarea[required]");
 
-        // 1. Validatie (nu korter met checkValidity)
+        // 1. Validatie
         inputs.forEach(input => {
             const errorSpan = document.getElementById(`${input.id}-error`);
 
@@ -19,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 showError(input, errorSpan, "This field is required.");
                 isValid = false;
             } else if (input.type === "email" && !input.checkValidity()) {
-                // De browser checkt nu zelf of het een geldig e-mailadres is
                 showError(input, errorSpan, "Please enter a valid email address.");
                 isValid = false;
             } else if (input.minLength > 0 && input.value.length < input.minLength) {
@@ -36,14 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
         submitBtn.disabled = true;
         submitBtn.innerText = "Sending...";
 
-        // Stap A: Mail naar Lumo Support (Dave) - ID omgewisseld naar 423fd0a
+        // Stap A: Mail naar Lumo Support (Dave)
         emailjs.sendForm('service_qwfiau8', 'template_423fd0a', form)
             .then(() => {
-                // Stap B: Bevestigingsmail naar de bezoeker - ID omgewisseld naar 0nyohae
+
                 return emailjs.sendForm('service_qwfiau8', 'template_0nyohae', form);
             })
             .then(() => {
-                // Alles gelukt!
+
                 formContent.style.display = "none";
                 thanksMessage.style.display = "block";
             })
