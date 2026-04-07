@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/support.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("SH3wRrD5fC4vkhWeO");
+            window.onload = function() {
+                emailjs.init("SH3wRrD5fC4vkhWeO");
+            };
         })();
     </script>
 </head>
@@ -71,7 +73,7 @@
     </div>
 </main>
 
-<script src="./javascript/support.js"></script>
+<script src="./javascript/support.js" defer></script>
 
 </body>
 </html>
