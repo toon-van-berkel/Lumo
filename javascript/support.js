@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 showError(input, errorSpan, "This field is required.");
                 isValid = false;
             } else if (input.type === "email" && !input.checkValidity()) {
+                // De browser checkt nu zelf of het een geldig e-mailadres is
                 showError(input, errorSpan, "Please enter a valid email address.");
                 isValid = false;
             } else if (input.minLength > 0 && input.value.length < input.minLength) {
