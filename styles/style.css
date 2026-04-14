@@ -82,7 +82,6 @@ a {
 
 .badge {
   display: inline-block;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20px;
   padding: 8px 16px;
@@ -95,7 +94,6 @@ a {
 button {
   background-color: #00bf00;
   display: inline-block;
-  width: -moz-max-content;
   width: max-content;
   margin-top: 20px;
   padding: 8px 16px;
@@ -124,7 +122,6 @@ button:hover {
 .notification-container > div {
   display: flex;
   gap: 5px;
-  width: -moz-max-content;
   width: max-content;
   padding: 8px 16px;
   border-radius: 999px;
@@ -166,10 +163,8 @@ button:hover {
 .banner-container > video {
   width: 100%;
   height: 40svh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
   z-index: 2;
 }
 .banner-container > div {
@@ -301,4 +296,6 @@ footer > div > div.row:last-child {
 }
 .logo-container > img {
   width: 80px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
