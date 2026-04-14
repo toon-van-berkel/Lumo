@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. SETTINGS & GLOBALS
+   ========================================================================== */
 @use 'variables';
 
 html {
@@ -16,6 +19,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Typography Defaults */
 h1, h2, h3, nav a, .logo-container {
   font-family: variables.$font-title;
   font-weight: 700;
@@ -26,6 +30,9 @@ p, li, footer span {
   color: variables.$secondary-text;
 }
 
+/* ==========================================================================
+   2. NAVIGATION
+   ========================================================================== */
 nav {
   width: 100%;
   max-width: 1200px;
@@ -62,6 +69,9 @@ nav {
   }
 }
 
+/* ==========================================================================
+   3. MAIN LAYOUT & SECTIONS
+   ========================================================================== */
 main {
   width: 100%;
   max-width: 1200px;
@@ -92,6 +102,30 @@ section {
   }
 }
 
+#how-it-works {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ==========================================================================
+   4. CONTAINERS & COMPONENTS
+   ========================================================================== */
+
+/* Logo Component */
+.logo-container {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  color: variables.$primary-text;
+  font-size: 1.2rem;
+
+  > img {
+    width: 60px;
+  }
+}
+
+/* Video Component */
 .video-container {
   width: 100%;
   margin: 30px 0;
@@ -108,12 +142,7 @@ section {
   }
 }
 
-#how-it-works {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
+/* Notifications */
 .notification-container {
   > div {
     &.succes {
@@ -130,75 +159,9 @@ section {
   }
 }
 
-footer {
-  width: 100%;
-  max-width: 1200px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-top: 1px solid variables.$success-bg-alpha;
-  margin-top: auto;
-
-  > div {
-    width: 100%;
-    gap: 20px;
-    margin-bottom: 20px;
-    display: flex;
-
-    > ul,
-    > div {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-
-      &.row {
-        flex-direction: row;
-        gap: 20px;
-      }
-
-      &:first-child { align-items: flex-start; }
-      &:last-child { align-items: flex-end; }
-    }
-
-    > ul.row {
-      &:first-child { justify-content: flex-start; }
-      &:last-child { justify-content: flex-end; }
-    }
-  }
-
-  li {
-    list-style: none;
-    font-size: 0.9rem;
-    color: variables.$dimmed-text;
-  }
-
-  a {
-    color: variables.$success-accent !important;
-    text-decoration: none;
-    font-family: variables.$font-title;
-    font-size: 0.9rem;
-    transition: 0.3s ease;
-
-    &:hover {
-      opacity: 0.6;
-      text-decoration: underline;
-    }
-  }
-}
-
-.logo-container {
-  gap: 15px;
-  display: flex;
-  align-items: center;
-  color: variables.$primary-text;
-  font-size: 1.2rem;
-
-  > img {
-    width: 60px;
-  }
-}
-
+/* ==========================================================================
+   5. GUIDE PAGE SPECIFIC LAYOUT
+   ========================================================================== */
 .guide-layout {
   display: flex;
   flex-direction: row;
@@ -281,5 +244,65 @@ footer {
     font-family: variables.$font-para;
     color: variables.$secondary-text;
     line-height: 1.8;
+  }
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+footer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid variables.$success-bg-alpha;
+  margin-top: auto;
+
+  > div {
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+    display: flex;
+
+    > ul,
+    > div {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      &.row {
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      &:first-child { align-items: flex-start; }
+      &:last-child { align-items: flex-end; }
+    }
+
+    > ul.row {
+      &:first-child { justify-content: flex-start; }
+      &:last-child { justify-content: flex-end; }
+    }
+  }
+
+  li {
+    list-style: none;
+    font-size: 0.9rem;
+    color: variables.$dimmed-text;
+  }
+
+  a {
+    color: variables.$success-accent !important;
+    text-decoration: none;
+    font-family: variables.$font-title;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+
+    &:hover {
+      opacity: 0.6;
+      text-decoration: underline;
+    }
   }
 }
