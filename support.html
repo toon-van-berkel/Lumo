@@ -1,82 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/LUMO-logo.png" type="image/x-icon">
-    <title>Lumo</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <script type="module" src="./javascript/app.js"></script>
+    <meta charset="UTF-8">
+    <title>Support – Lumo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/support.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+
+    <script src="./javascript/support.js" defer></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Guide</a></li>
-        </ul>
-        <a href="./index.html">
-            <img src="./assets/LUMO-logo.png" alt="Logo of LUMO">
-        </a>
-        <ul>
-            <li><a href="./support.html">Support</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="notification-container" id="notificationContainer"></div>
 
-        <section>
-            <h1>Need support? This is the place to get support wiht any porblem you might have.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eaque modi, quasi sequi architecto nostrum consectetur est commodi itaque deleniti possimus consequuntur quod eum facilis vel eveniet amet eos, quis, consequatur nesciunt aut fuga? Placeat modi voluptatem unde accusamus voluptas distinctio, rem, ea fuga reprehenderit repellat quam accusantium asperiores iste in laborum officiis aspernatur dolor! Id, nulla fuga? Sit nam doloremque asperiores quam aperiam perferendis eaque explicabo impedit reiciendis laudantium nemo nostrum exercitationem repellendus id fugiat, maxime fuga vero quod. Soluta tempore ratione odit qui temporibus consectetur corporis, cupiditate ut?</p>
+<nav>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Guide</a></li>
+    </ul>
 
-            <form action="">
-                <div>
-                    <div>
-                        <label for="name">First name*:</label>
-                        <input type="text" name="name" />
-                    </div>
-                    <div>
-                        <label for="name">Last name*:</label>
-                        <input type="text" name="name" />
-                    </div>
-                </div>
+    <a href="./index.html">
+        <img src="./assets/LUMO-logo.png" alt="Logo of LUMO">
+    </a>
 
-                <div>
-                    <div>
-                        <label for="name">Email*:</label>
-                        <input type="text" name="name" />
-                    </div>
-                    <div>
-                        <label for="name">Phone number:</label>
-                        <input type="text" name="name" />
-                    </div>
-                </div>
+    <ul>
+        <li><a href="./support.html">Support</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="container">
+        <div id="form-content">
+            <h1>Report a Problem</h1>
+            <p>Experiencing an issue with <strong>Lumo</strong>? Let us know below.</p>
+
+            <form id="support-form" novalidate>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Your name" required minlength="2">
+                <span class="error-msg" id="name-error"></span>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="your@email.com" required>
+                <span class="error-msg" id="email-error"></span>
+
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" placeholder="What is this about?" required>
+                <span class="error-msg" id="subject-error"></span>
+
+                <label for="message">Describe the issue</label>
+                <textarea name="message" id="message" placeholder="Please describe your problem..." required minlength="10"></textarea>
+                <span class="error-msg" id="message-error"></span>
+
+                <button type="submit" id="submit-btn">Send Message</button>
             </form>
-        </section>
-    </main>
-    <footer>
-        <div>
-            <ul>
-                <li class="logo-container"><img src="./assets/LUMO-logo.png" alt="LUMO"> LUMO</li>
-                <li>© Copyright 2026 - 2029</li>
-            </ul>
-            <ul>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="./support.html">Support</a></li>
-            </ul>
         </div>
-        <div>
-            <ul class="row">
-                <li><a href="https://lumo.hogeschool-rotterdam.com/">LUMO</a></li> |
-                <li><a href="http://connect-lumo.hogeschool-rotterdam.com/">LUMO Connect</a></li> |
-                <li>Team 12 - CLE3</li>
-            </ul>
-            <ul class="row">
-                <li><a href="#">Privacy</a> |</li>
-                <li><a href="#">General terms and conditions</a> |</li>
-                <li><a href="#">Cookies</a></li>
-            </ul>
+
+        <div id="thanks-message" style="display: none; text-align: center; padding: 20px;">
+            <h1 style="color: #00bf00;">Sent!</h1>
+            <p>Thank you for reaching out. We've sent a confirmation to your email.</p>
+            <button onclick="location.reload()" style="background: transparent; border: 1px solid #4b5563; color: #9ca3af; margin-top: 20px; width: auto; padding: 10px 20px; border-radius: 999px;">
+                Send another message
+            </button>
         </div>
-    </footer>
+
+        <div class="footer">
+            © 2026 Lumo Support
+        </div>
+    </div>
+</main>
+
 </body>
 </html>
