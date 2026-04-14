@@ -1,6 +1,5 @@
 @use 'variables';
 
-// Base elementen
 html {
   scroll-behavior: smooth;
 }
@@ -17,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-// Typografie groepen
 h1, h2, h3, nav a, .logo-container {
   font-family: variables.$font-title;
   font-weight: 700;
@@ -28,7 +26,6 @@ p, li, footer span {
   color: variables.$secondary-text;
 }
 
-// Navigatie
 nav {
   width: 100%;
   max-width: 1200px;
@@ -65,7 +62,6 @@ nav {
   }
 }
 
-// Main & Secties
 main {
   width: 100%;
   max-width: 1200px;
@@ -112,14 +108,12 @@ section {
   }
 }
 
-// Zorg dat de sectie de video goed uitlijnt
 #how-it-works {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-// Notificaties
 .notification-container {
   > div {
     &.succes {
@@ -136,7 +130,6 @@ section {
   }
 }
 
-// Footer
 footer {
   width: 100%;
   max-width: 1200px;
@@ -194,7 +187,6 @@ footer {
   }
 }
 
-// Logo
 .logo-container {
   gap: 15px;
   display: flex;
@@ -207,7 +199,6 @@ footer {
   }
 }
 
-// Guide Layout & Sidebar
 .guide-layout {
   display: flex;
   flex-direction: row;

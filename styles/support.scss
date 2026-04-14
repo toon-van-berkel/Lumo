@@ -1,6 +1,5 @@
 @use 'variables';
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,6 @@
   font-family: variables.$font-para;
 }
 
-/* Body */
 body {
   min-height: 100vh;
   display: flex;
@@ -18,11 +16,10 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV */
 nav {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; // Centers the nav bar
+  margin: 0 auto;
   min-height: 10svh;
   padding: 20px;
   display: grid;
@@ -56,28 +53,25 @@ nav {
   }
 }
 
-/* Main - Centering the card */
 main {
-  flex: 1; // Takes up remaining vertical space
+  flex: 1;
   display: flex;
-  justify-content: center; // Horizontal center
-  align-items: center;     // Vertical center
+  justify-content: center;
+  align-items: center;
   padding: 40px 20px;
 }
 
-/* Container - Fixed "Small" Issue */
 .container {
   background-color: variables.$secondary-bg;
-  padding: 45px; // Increased padding for better breathing room
+  padding: 45px;
   border: 1px solid variables.$neutral-border;
   border-radius: 16px;
   width: 100%;
   max-width: 700px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); // Adds depth
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: left;
 }
 
-/* Typography */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -93,7 +87,6 @@ p {
   font-size: 1.1rem;
 }
 
-/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -109,7 +102,7 @@ form {
 
   input, textarea {
     width: 100%;
-    padding: 14px; // Slightly larger for better UX
+    padding: 14px;
     background-color: variables.$primary-bg;
     border: 1px solid variables.$neutral-border;
     border-radius: 8px;
@@ -117,7 +110,7 @@ form {
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
+    margin: 5px 0 20px 0;
 
     &:focus {
       border-color: variables.$success-accent;
@@ -126,7 +119,7 @@ form {
   }
 
   textarea {
-    min-height: 120px; // Ensures the textarea feels substantial
+    min-height: 120px;
     resize: vertical;
   }
 }
@@ -139,11 +132,10 @@ form {
   color: #ff4444;
   font-size: 0.8rem;
   min-height: 18px;
-  margin-top: -8px; // Pulls error closer to the field
+  margin-top: -8px;
   display: block;
 }
 
-/* Button */
 .submit-button {
   background-color: variables.$success-accent;
   width: 100%;
@@ -151,7 +143,7 @@ form {
   padding: 14px;
   border: 1px solid transparent;
   border-radius: 999px;
-  color: #000; // Matches typical high-contrast green buttons
+  color: #000;
   font-size: 1rem;
   font-weight: 700;
   font-family: variables.$font-title;

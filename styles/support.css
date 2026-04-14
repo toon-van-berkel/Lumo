@@ -1,4 +1,3 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   font-family: "Inter", sans-serif;
 }
 
-/* Body */
 body {
   min-height: 100vh;
   display: flex;
@@ -16,7 +14,6 @@ body {
   overflow-x: hidden;
 }
 
-/* NAV */
 nav {
   width: 100%;
   max-width: 1200px;
@@ -55,7 +52,6 @@ nav img {
   display: block;
 }
 
-/* Main - Centering the card */
 main {
   flex: 1;
   display: flex;
@@ -64,7 +60,6 @@ main {
   padding: 40px 20px;
 }
 
-/* Container - Fixed "Small" Issue */
 .container {
   background-color: #1f2937;
   padding: 45px;
@@ -76,7 +71,6 @@ main {
   text-align: left;
 }
 
-/* Typography */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -92,7 +86,6 @@ p {
   font-size: 1.1rem;
 }
 
-/* Form */
 form {
   display: flex;
   flex-direction: column;
@@ -115,7 +108,7 @@ form input, form textarea {
   font-size: 1rem;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px;
+  margin: 5px 0 20px 0;
 }
 form input:focus, form textarea:focus {
   border-color: #00bf00;
@@ -138,7 +131,6 @@ form textarea {
   display: block;
 }
 
-/* Button */
 .submit-button {
   background-color: #00bf00;
   width: 100%;
