@@ -1,4 +1,14 @@
-import {addNotification} from './notification.js';
+import { setPreferredLanguage, setPreferredTheme } from './preferences.js';
+import { generateContent } from './generateContent.js';
 
-// Add a notification about automatically trying to connect
-// addNotification('countingInformation', 'Automatically trying to connect in', 60, Connect);
+let connectButton = document.querySelector('#connect');
+
+// ============================================================================
+// ============================================================================
+// =============================== Load content ===============================
+// ============================================================================
+// ============================================================================
+// Load on mount
+setPreferredLanguage();
+setPreferredTheme();
+generateContent();
