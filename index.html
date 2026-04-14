@@ -9,18 +9,17 @@
     <script type="module" src="./javascript/app.js"></script>
 </head>
 <body>
-    <nav>
+    <div class="top-bar">
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Guide</a></li>
+            <li>
+                <select name="Language selector" id="languageSelector">
+                    <option value="en-gb">en-gb</option>
+                    <option value="nl-nl">nl-nl</option>
+                </select>
+            </li>
         </ul>
-        <a href="./index.html">
-            <img src="./assets/LUMO-logo.png" alt="Logo of LUMO">
-        </a>
-        <ul>
-            <li><a href="./support.html">Support</a></li>
-        </ul>
-    </nav>
+    </div>
+    <nav id="nav"></nav>
     <main>
         <div class="notification-container" id="notificationContainer"></div>
         <div class="banner-container">
