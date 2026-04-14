@@ -3,10 +3,15 @@
 // ======================== Import component styling ==========================
 // ============================================================================
 // ============================================================================
+
 @use './components/buttons';
 @use './components/footer';
 @use './components/nav';
 @use './components/notification';
+@use './guide';
+@use './support';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -195,21 +200,21 @@ button:hover {
     & > div {
         width: 100%;
         height: 40svh;
-        
+
         position: absolute;
         top: 0;
         left: 0;
 
         background-color: #D3FFDE;
         opacity: 0.5;
-        
+
         z-index: 3;
 
         & > img {
             width: auto;
             height: 100%;
 
-            
+
             z-index: 4;
         }
     }
@@ -256,7 +261,6 @@ form {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 16px;
-    border: 1px solid #4b5563;
     border-radius: 8px;
 }
 
@@ -278,7 +282,7 @@ footer {
         margin-bottom: 20px;
         display: flex;
 
-        & > ul, 
+        & > ul,
         & > div {
             display: flex;
             flex-direction: column;

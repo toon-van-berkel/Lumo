@@ -1,0 +1,174 @@
+@use 'variables';
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: variables.$font-para;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, variables.$primary-bg, variables.$secondary-bg);
+  color: variables.$primary-text;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; // Centers the nav bar
+  min-height: 10svh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid variables.$success-bg-alpha;
+
+  ul {
+    gap: 20px;
+    display: flex;
+    list-style: none;
+
+    &:first-of-type { justify-content: flex-start; }
+    &:last-of-type { justify-content: flex-end; }
+  }
+
+  a {
+    text-decoration: none;
+    color: variables.$success-accent;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: variables.$font-title;
+    transition: 0.3s ease;
+
+    &:hover { opacity: 0.8; }
+  }
+
+  img {
+    height: 40px;
+    display: block;
+  }
+}
+
+/* Main - Centering the card */
+main {
+  flex: 1; // Takes up remaining vertical space
+  display: flex;
+  justify-content: center; // Horizontal center
+  align-items: center;     // Vertical center
+  padding: 40px 20px;
+}
+
+/* Container - Fixed "Small" Issue */
+.container {
+  background-color: variables.$secondary-bg;
+  padding: 45px; // Increased padding for better breathing room
+  border: 1px solid variables.$neutral-border;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); // Adds depth
+  text-align: left;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: variables.$font-title;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  color: variables.$secondary-text;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+
+  label {
+    font-size: 0.9rem;
+    color: variables.$dimmed-text;
+    font-family: variables.$font-title;
+    font-weight: 500;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 14px; // Slightly larger for better UX
+    background-color: variables.$primary-bg;
+    border: 1px solid variables.$neutral-border;
+    border-radius: 8px;
+    color: variables.$primary-text;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+
+    &:focus {
+      border-color: variables.$success-accent;
+      box-shadow: 0 0 0 2px rgba(variables.$success-accent, 0.2);
+    }
+  }
+
+  textarea {
+    min-height: 120px; // Ensures the textarea feels substantial
+    resize: vertical;
+  }
+}
+
+.form-intro {
+  text-align: center;
+}
+
+.error-msg {
+  color: #ff4444;
+  font-size: 0.8rem;
+  min-height: 18px;
+  margin-top: -8px; // Pulls error closer to the field
+  display: block;
+}
+
+/* Button */
+.submit-button {
+  background-color: variables.$success-accent;
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #000; // Matches typical high-contrast green buttons
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: variables.$font-title;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: transparent;
+    border-color: variables.$success-accent;
+    color: variables.$success-accent;
+  }
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: variables.$dimmed-text;
+  opacity: 0.7;
+}
