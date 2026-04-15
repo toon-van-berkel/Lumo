@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Support – Lumo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/support.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+            defer></script>
 
     <script src="./javascript/support.js" defer></script>
 </head>
@@ -15,7 +16,7 @@
 <nav>
     <ul>
         <li><a href="./index.html">Home</a></li>
-        <li><a href="#">Guide</a></li>
+        <li><a href="./guide.html">Guide</a></li>
     </ul>
 
     <a href="./index.html">
@@ -31,7 +32,7 @@
     <div class="container">
         <div id="form-content">
             <h1>Report a Problem</h1>
-            <p>Experiencing an issue with <strong>Lumo</strong>? Let us know below.</p>
+            <p class="form-intro">Experiencing an issue with <strong>Lumo</strong>? Let us know below.</p>
 
             <form id="support-form" novalidate>
                 <label for="name">Name</label>
@@ -47,17 +48,19 @@
                 <span class="error-msg" id="subject-error"></span>
 
                 <label for="message">Describe the issue</label>
-                <textarea name="message" id="message" placeholder="Please describe your problem..." required minlength="10"></textarea>
+                <textarea name="message" id="message" placeholder="Please describe your problem..." required
+                          minlength="10"></textarea>
                 <span class="error-msg" id="message-error"></span>
 
-                <button type="submit" id="submit-btn">Send Message</button>
+                <button class="submit-button" type="submit" id="submit-btn">Send Message</button>
             </form>
         </div>
 
         <div id="thanks-message" style="display: none; text-align: center; padding: 20px;">
             <h1 style="color: #00bf00;">Sent!</h1>
             <p>Thank you for reaching out. We've sent a confirmation to your email.</p>
-            <button onclick="location.reload()" style="background: transparent; border: 1px solid #4b5563; color: #9ca3af; margin-top: 20px; width: auto; padding: 10px 20px; border-radius: 999px;">
+            <button onclick="location.reload()"
+                    style="background: transparent; border: 1px solid #4b5563; color: #9ca3af; margin-top: 20px; width: auto; padding: 10px 20px; border-radius: 999px;">
                 Send another message
             </button>
         </div>

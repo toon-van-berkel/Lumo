@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="./assets/LUMO-logo.png" type="image/x-icon">
     <title>Lumo</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <script type="module" src="./javascript/app.js"></script>
+    <script defer type="module" src="./javascript/app.js"></script>
 </head>
 <body>
-    <nav>
+<nav>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./guide.html">Guide</a></li>
+    </ul>
+    <a href="./index.html">
+        <img src="./assets/LUMO-logo.png" alt="Logo of LUMO">
+    </a>
+    <ul>
+        <li><a href="./support.html">Support</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="notification-container" id="notificationContainer"></div>
+    <div class="banner-container">
+        <div class="background"></div>
+        <video src="./assets/HeroBanner-Video.mp4" autoplay loop></video>
+        <div>
+            <img src="./assets/LUMO-banner.png" alt="Banner with the word LUMO on it">
+        </div>
+    </div>
+
+    <section>
+        <h1>The way to connect to the hearing world, LUMO</h1>
+        <p>We created LUMO to bridge the gap between the hearing and deaf communities. Our smart device empowers you to
+            experience sports just like everyone else, without boundaries.</p>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <img src="./assets/icons/eye-fill.svg" alt="experience icon" class="card-icon">
+                <h3>Experience</h3>
+                <p>Take your sport experience to the next level.</p>
+            </div>
+            <div class="info-card">
+                <img src="./assets/icons/file-earmark-text-fill.svg" alt="guide icon" class="card-icon">
+                <h3>Guide</h3>
+                <p>Get to know the device with our guide.</p>
+            </div>
+            <div class="info-card">
+                <img src="./assets/icons/envelope-fill.svg" alt="support icon" class="card-icon">
+                <h3>Support</h3>
+                <p>Send your feedback or problems to us using the form.</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div>
         <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Guide</a></li>
+            <li class="logo-container"><img src="./assets/LUMO-logo.png" alt="LUMO"> LUMO</li>
+            <li>© Copyright 2026 - 2029</li>
         </ul>
-        <a href="./index.html">
-            <img src="./assets/LUMO-logo.png" alt="Logo of LUMO">
-        </a>
         <ul>
+            <li><a href="#">Guide</a></li>
+            <li><a href="#">Contact</a></li>
             <li><a href="./support.html">Support</a></li>
         </ul>
-    </nav>
-    <main>
-        <div class="notification-container" id="notificationContainer"></div>
-        <div class="banner-container">
-            <div class="background"></div>
-            <video src="./assets/HeroBanner-Video.mp4" autoplay loop></video>
-            <div>
-                <img src="./assets/LUMO-banner.png" alt="Banner with the word LUMO on it">
-            </div>
-        </div>
-
-        <section>
-            <h1>The way to connnect to the hearing world, LUMO</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eaque modi, quasi sequi architecto nostrum consectetur est commodi itaque deleniti possimus consequuntur quod eum facilis vel eveniet amet eos, quis, consequatur nesciunt aut fuga? Placeat modi voluptatem unde accusamus voluptas distinctio, rem, ea fuga reprehenderit repellat quam accusantium asperiores iste in laborum officiis aspernatur dolor! Id, nulla fuga? Sit nam doloremque asperiores quam aperiam perferendis eaque explicabo impedit reiciendis laudantium nemo nostrum exercitationem repellendus id fugiat, maxime fuga vero quod. Soluta tempore ratione odit qui temporibus consectetur corporis, cupiditate ut?</p>
-        
-            <div class="side">
-                <div>
-                    <h2>Why would you need LUMO</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eaque modi, quasi sequi architecto nostrum consectetur est commodi itaque deleniti possimus consequuntur quod eum facilis vel eveniet amet eos, quis, consequatur nesciunt aut fuga? Placeat modi voluptatem unde accusamus voluptas distinctio, rem, ea fuga reprehenderit repellat quam accusantium asperiores iste in laborum officiis aspernatur dolor! Id, nulla fuga? Sit nam doloremque asperiores quam aperiam perferendis eaque explicabo impedit reiciendis laudantium nemo nostrum exercitationem repellendus id fugiat, maxime fuga vero quod. Soluta tempore ratione odit qui temporibus consectetur corporis, cupiditate ut?</p>
-                </div>
-                <div>     
-                    <h2>Why would you use LUMO</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore eaque modi, quasi sequi architecto nostrum consectetur est commodi itaque deleniti possimus consequuntur quod eum facilis vel eveniet amet eos, quis, consequatur nesciunt aut fuga? Placeat modi voluptatem unde accusamus voluptas distinctio, rem, ea fuga reprehenderit repellat quam accusantium asperiores iste in laborum officiis aspernatur dolor! Id, nulla fuga? Sit nam doloremque asperiores quam aperiam perferendis eaque explicabo impedit reiciendis laudantium nemo nostrum exercitationem repellendus id fugiat, maxime fuga vero quod. Soluta tempore ratione odit qui temporibus consectetur corporis, cupiditate ut?</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div>
-            <ul>
-                <li class="logo-container"><img src="./assets/LUMO-logo.png" alt="LUMO"> LUMO</li>
-                <li>© Copyright 2026 - 2029</li>
-            </ul>
-            <ul>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="./support.html">Support</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="row">
-                <li><a href="https://lumo.hogeschool-rotterdam.com/">LUMO</a></li> |
-                <li><a href="http://connect-lumo.hogeschool-rotterdam.com/">LUMO Connect</a></li> |
-                <li>Team 12 - CLE3</li>
-            </ul>
-            <ul class="row">
-                <li><a href="#">Privacy</a> |</li>
-                <li><a href="#">General terms and conditions</a> |</li>
-                <li><a href="#">Cookies</a></li>
-            </ul>
-        </div>
-    </footer>
+    </div>
+    <div>
+        <ul class="row">
+            <li><a href="https://lumo.hogeschool-rotterdam.com/">LUMO</a></li>
+            |
+            <li><a href="http://connect-lumo.hogeschool-rotterdam.com/">LUMO Connect</a></li>
+            |
+            <li>Team 12 - CLE3</li>
+        </ul>
+        <ul class="row">
+            <li><a href="#">Privacy</a> |</li>
+            <li><a href="#">General terms and conditions</a> |</li>
+            <li><a href="#">Cookies</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
