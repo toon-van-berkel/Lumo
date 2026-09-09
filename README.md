@@ -26,3 +26,12 @@ Code: [LUMO Connect repo (Github)](https://github.com/toon-van-berkel/Connect.Lu
 ## Doel van het project
 
 Het doel van LUMO is om sport en beweging toegankelijker, veiliger en inclusiever te maken voor mensen met een auditieve beperking.
+
+## 📄 License
+
+Copyright © 2026 LUMO project contributors. All rights reserved.
+
+This project is publicly available for **educational, reference and portfolio purposes only**.  
+Reuse, redistribution or modification requires prior permission from the copyright holders.
+
+See [`LICENSE`](LICENSE) for the full terms.
